@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - サーバーエラー</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="display-1">500</h1>
+                <h2 class="mb-4">サーバーエラー</h2>
+                <p class="lead mb-4">
+                    申し訳ありません。サーバーで問題が発生しました。<br>
+                    しばらく時間をおいてから再度お試しください。
+                </p>
+                <div class="mb-4">
+                    <a href="{{ url_for('frontend.index') }}" class="btn btn-primary">
+                        トップページに戻る
+                    </a>
+                </div>
+                <div class="text-muted">
+                    <small>
+                        エラーが続く場合は、システム管理者にお問い合わせください。<br>
+                        エラー発生時刻: {{ datetime.now().strftime('%Y-%m-%d %H:%M:%S') }}
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

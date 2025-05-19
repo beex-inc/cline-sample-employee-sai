@@ -1,0 +1,43 @@
+{
+    "name": "Employee App Development",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "eamodio.gitlens",
+                "ms-azuretools.vscode-docker",
+                "bierner.markdown-mermaid",
+				"saoudrizwan.claude-dev"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.formatting.provider": "black",
+                "editor.formatOnSave": true,
+                "editor.rulers": [80, 100],
+                "files.trimTrailingWhitespace": true
+            }
+        }
+    },
+
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11"
+        }
+    },
+
+    "forwardPorts": [8000, 3306],
+    
+    "postCreateCommand": "pip install --user -r requirements.txt",
+    
+    "remoteUser": "vscode",
+
+    "mounts": [
+        "source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind,consistency=cached"
+    ]
+}

@@ -1,0 +1,41 @@
+/* Custom styles for the employee management system */
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.btn-sm {
+    margin: 2px;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Error message styling */
+.alert {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive table adjustments */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 14px;
+    }
+
+    .btn-sm {
+        padding: 0.2rem 0.4rem;
+        font-size: 12px;
+    }
+}
